@@ -98,8 +98,7 @@ def mask_image():
 			cv2.rectangle(image, (startX, startY), (endX, endY), color, 2)
 
 	# show the output image
-	cv2.imshow("Output", image)
-	cv2.waitKey(0)
+	
 	out_file = args["image"].split("/")[-1].split(".")[0]+"-detect.jpg"
 	cv2.imwrite(out_file, image)
 	
